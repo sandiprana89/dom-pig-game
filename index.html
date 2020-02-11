@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>The Dice Pig Game</title>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container text-white">
+      <div
+        class="row m-3 rounded p-2 header text-center shadow-lg border border-secondary text-danger"
+      >
+        <div class="col"><h1>The Dice Pig Game</h1></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-3">
+          <div
+            class="row text-center rounded player-0-panel border border-secondary "
+          >
+            <div class="col">
+              <div class="row mb-5">
+                <div class="col">
+                  <h2 class="shadow-lg p-3 rounded-circle mb-5 mt-2">
+                    Player 1
+                  </h2>
+
+                  <h1><div class="" id="name-0"></div></h1>
+
+                  <h1>
+                    <div class="badge badge-warning" id="score-0">43</div>
+                  </h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="">Current Score</div>
+                  <h3>
+                    <div class="" id="current-0">11</div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row ml-1 mr-1 play-area">
+            <div class="col">
+              <div class="row ">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <button class="mb-1 btn-new btn btn-outline-info">
+                        New Game
+                      </button>
+                    </div>
+                    <div class="col text-left">
+                      <h4>
+                        <span class="badge badge-pill badge-info"
+                          >Winning Score
+
+                          <input
+                            class="bg-info text-center border border-light text-warning"
+                            style="width: 75px;height: 30px;"
+                            id="winning-score"
+                            type="number"
+                          />
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-4"></div>
+                <div class="col-4">
+                  <img
+                    width="150px"
+                    src="img/dice-5.png"
+                    alt="dice"
+                    class="dice p-3 mb-5 bg-white rounded img-fluid"
+                  />
+                </div>
+                <div class="col-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div
+            class="row text-center rounded player-1-panel border border-secondary "
+          >
+            <div class="col">
+              <div class="row mb-5">
+                <div class="col">
+                  <h2 class="shadow-lg p-3 rounded-circle mb-5 mt-2">
+                    Player 2
+                  </h2>
+
+                  <h1><div class="" id="name-1"></div></h1>
+
+                  <h1>
+                    <div class="badge badge-warning" id="score-1">43</div>
+                  </h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="">Current Score</div>
+                  <h3>
+                    <div class="" id="current-1">11</div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="play-buttons row mt-5 text-center">
+        <div class="col">
+          <button class="mr-3 btn-roll btn btn-outline-danger">
+            Roll Dice
+          </button>
+          <button class="btn-hold btn btn-outline-success">
+            Hold
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
