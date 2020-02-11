@@ -1,4 +1,2 @@
-# Dom Pig Game
-javascript based game to learn dom
-
-https://dom-dice-pig-game.netlify.com/
+# Dom Pig Game =>  https://dom-dice-pig-game.netlify.com/
+Javascript based game to learn dom
