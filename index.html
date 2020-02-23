@@ -1,5 +1,16 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!-- <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e50000" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -7,11 +18,36 @@
       crossorigin="anonymous"
     />
 
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Add this to your HEAD if you want to load the 
+apple-touch-icons from another dir than your sites' root -->
+
+    <link
+      rel="apple-touch-icon"
+      href="img/touch-icons/apple-touch-icon-iphone-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/touch-icons/apple-touch-icon-ipad-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/touch-icons/apple-touch-icon-iphone-retina-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/touch-icons/apple-touch-icon-ipad-retina-152x152.png"
+    />
+
     <title>The Dice Pig Game</title>
   </head>
 
   <body class="bg-dark">
-    <div class="container text-white">
+    <div class="container px-3 text-white">
       <div
         class="row m-3 rounded p-2 header text-center shadow-lg border border-secondary text-danger"
       >
@@ -48,7 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-5">
           <div class="row ml-1 mr-1 play-area">
             <div class="col">
               <div class="row ">
@@ -135,5 +171,12 @@
       </div>
     </div>
     <script src="app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function() {
+          console.log('Service Worker Registered');
+        });
+      }
+    </script>
   </body>
 </html>
