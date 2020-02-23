@@ -47,13 +47,48 @@ apple-touch-icons from another dir than your sites' root -->
   </head>
 
   <body class="bg-dark">
-    <div class="container px-3 text-white">
+    <div class="container-sm text-white">
       <div
         class="row m-3 rounded p-2 header text-center shadow-lg border border-secondary text-danger"
       >
         <div class="col"><h1>The Dice Pig Game</h1></div>
       </div>
-      <div class="row mt-5">
+      <div class="row ">
+        <div class="col">
+          <div class="row">
+            <div class="col-5 text-right">
+              <button class="mb-1 btn-new btn btn-outline-info">
+                New Game
+              </button>
+            </div>
+            <div class="col-3 text-left">
+              <h4>
+                <span class="badge badge-pill badge-info"
+                  >Winning Score
+
+                  <input
+                    class="bg-info text-center border border-light text-warning"
+                    style="width: 75px;height: 30px;"
+                    id="winning-score"
+                    type="number"
+                  />
+                </span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="play-buttons row mt-5 text-center">
+        <div class="col-11">
+          <button class="mr-2 btn-roll btn btn-outline-danger">
+            Roll Dice
+          </button>
+          <button class="btn-hold btn btn-outline-success">
+            Hold
+          </button>
+        </div>
+      </div>
+      <div class="row mb-1 mt-5">
         <div class="col-3">
           <div
             class="row text-center rounded player-0-panel border border-secondary "
@@ -87,41 +122,18 @@ apple-touch-icons from another dir than your sites' root -->
         <div class="col-5">
           <div class="row ml-1 mr-1 play-area">
             <div class="col">
-              <div class="row ">
-                <div class="col">
-                  <div class="row">
-                    <div class="col">
-                      <button class="mb-1 btn-new btn btn-outline-info">
-                        New Game
-                      </button>
-                    </div>
-                    <div class="col text-left">
-                      <h4>
-                        <span class="badge badge-pill badge-info"
-                          >Winning Score
-
-                          <input
-                            class="bg-info text-center border border-light text-warning"
-                            style="width: 75px;height: 30px;"
-                            id="winning-score"
-                            type="number"
-                          />
-                        </span>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div class="row mt-5">
                 <div class="col-4"></div>
                 <div class="col-4">
-                  <img
+                  <h1>
+                    <div class="dicediv badge badge-primary"></div>
+                  </h1>
+                  <!-- <img
                     width="150px"
                     src="img/dice-5.png"
                     alt="dice"
                     class="dice p-3 mb-5 bg-white rounded img-fluid"
-                  />
+                  /> -->
                 </div>
                 <div class="col-4"></div>
               </div>
@@ -157,16 +169,6 @@ apple-touch-icons from another dir than your sites' root -->
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="play-buttons row mt-5 text-center">
-        <div class="col">
-          <button class="mr-3 btn-roll btn btn-outline-danger">
-            Roll Dice
-          </button>
-          <button class="btn-hold btn btn-outline-success">
-            Hold
-          </button>
         </div>
       </div>
     </div>
