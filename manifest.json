@@ -1,10 +1,10 @@
 {
   "name": "the dice pig game",
-  "short_name": "dice-game",
+  "short_name": "dice game",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "Scope": "/",
   "start_url": "/",
   "icons": [
