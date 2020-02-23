@@ -68,14 +68,15 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     var currentEl = document.getElementById('current-' + activePlayer);
 
     var diceEl = document.querySelector('.dice');
-    var diceDivEl = document.querySelector('.dicediv');
+    // var diceDivEl = document.querySelector('.dicediv');
 
     if (diceEl) {
       diceEl.src = 'img/dice-' + dice + '.png';
       diceEl.style.display = 'block';
-    } else {
-      diceDivEl.innerHTML = dice;
     }
+    //else {
+    //   diceDivEl.innerHTML = dice;
+    // }
 
     if (dice === 1) {
       alert('You rolled 1, bad luck, you lost your chance!!!');
@@ -135,9 +136,7 @@ function newGame() {
   document.getElementById('current-1').textContent = '0';
   document.getElementById('name-1').textContent = '';
 
-  document.querySelector('.dice')
-    ? (document.querySelector('.dice').style.display = 'none')
-    : '';
+  document.querySelector('.dice').style.display = 'none';
 
   document.getElementById('winning-score').value = winningScore;
 
