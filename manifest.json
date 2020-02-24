@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "any",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "https://dom-dice-pig-game.netlify.com/",
   "icons": [
     {
       "src": "img/icons/icon-72x72.png",
@@ -49,5 +49,8 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "splash_pages": null,
+  "url": "https://dom-dice-pig-game.netlify.com/",
+  "lang": "",
+  "screenshots": []
 }
