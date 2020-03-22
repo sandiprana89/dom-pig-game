@@ -15,44 +15,44 @@ Change the game to follow these rules:
 2. Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good oportunity to use google to figure this out :)
 
 */
-
+console.log("Sandip Console changes");
 var activePlayer, scores, winningScore, prevDice, isGameOn;
 
 newGame();
 
-document.querySelector('.btn-new').addEventListener('click', newGame);
+document.querySelector(".btn-new").addEventListener("click", newGame);
 
-document.getElementById('winning-score').addEventListener('keyup', function(e) {
+document.getElementById("winning-score").addEventListener("keyup", function(e) {
   winningScore = e.target.value;
 });
 
-document.querySelector('.btn-hold').addEventListener('click', function() {
+document.querySelector(".btn-hold").addEventListener("click", function() {
   if (isGameOn) {
-    var currentEl = document.getElementById('current-' + activePlayer);
+    var currentEl = document.getElementById("current-" + activePlayer);
 
     scores[activePlayer] =
       scores[activePlayer] + parseInt(currentEl.textContent);
 
-    document.getElementById('score-' + activePlayer).textContent =
+    document.getElementById("score-" + activePlayer).textContent =
       scores[activePlayer];
 
-    currentEl.textContent = '0';
+    currentEl.textContent = "0";
 
     // winningScore  = document.getElementById('winning-score').value;
 
     if (scores[activePlayer] >= winningScore) {
-      document.getElementById('name-' + activePlayer).textContent = 'Winner!!!';
+      document.getElementById("name-" + activePlayer).textContent = "Winner!!!";
 
       activePlayerEl = document.querySelector(
-        '.player-' + activePlayer + '-panel'
+        ".player-" + activePlayer + "-panel"
       );
 
       if (activePlayerEl) {
-        activePlayerEl.classList.add('bg-success');
-        activePlayerEl.classList.remove('bg-secondary');
+        activePlayerEl.classList.add("bg-success");
+        activePlayerEl.classList.remove("bg-secondary");
       }
-      var playBtnsEl = document.querySelector('.play-buttons');
-      playBtnsEl.classList.add('d-none');
+      var playBtnsEl = document.querySelector(".play-buttons");
+      playBtnsEl.classList.add("d-none");
 
       isGameOn = false;
     } else {
@@ -61,34 +61,34 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
   }
 });
 
-document.querySelector('.btn-roll').addEventListener('click', function() {
+document.querySelector(".btn-roll").addEventListener("click", function() {
   if (isGameOn) {
     var dice = Math.floor(Math.random() * 6 + 1);
 
-    var currentEl = document.getElementById('current-' + activePlayer);
+    var currentEl = document.getElementById("current-" + activePlayer);
 
-    var diceEl = document.querySelector('.dice');
+    var diceEl = document.querySelector(".dice");
     // var diceDivEl = document.querySelector('.dicediv');
 
     if (diceEl) {
-      diceEl.src = 'img/dice-' + dice + '.png';
-      diceEl.style.display = 'block';
+      diceEl.src = "img/dice-" + dice + ".png";
+      diceEl.style.display = "block";
     }
     //else {
     //   diceDivEl.innerHTML = dice;
     // }
 
     if (dice === 1) {
-      alert('You rolled 1, bad luck, you lost your chance!!!');
+      alert("You rolled 1, bad luck, you lost your chance!!!");
 
       currentEl.textContent = 0;
 
       nextPlayer();
     } else if (dice === 6 && prevDice === 6) {
       alert(
-        'You rolled 6 twice, bad luck, you lost your chance & your score!!!'
+        "You rolled 6 twice, bad luck, you lost your chance & your score!!!"
       );
-      document.getElementById('score-' + activePlayer).textContent = 0;
+      document.getElementById("score-" + activePlayer).textContent = 0;
       scores[activePlayer] = 0;
       currentEl.textContent = 0;
       nextPlayer();
@@ -102,8 +102,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 function nextPlayer() {
   prevDice = 0;
   document
-    .querySelector('.player-' + activePlayer + '-panel')
-    .classList.remove('bg-secondary');
+    .querySelector(".player-" + activePlayer + "-panel")
+    .classList.remove("bg-secondary");
   // if (activePlayer === 0) {
   //     activePlayer = 1
   // } else {
@@ -111,8 +111,8 @@ function nextPlayer() {
   // }
   activePlayer = activePlayer === 0 ? 1 : 0;
   document
-    .querySelector('.player-' + activePlayer + '-panel')
-    .classList.add('bg-secondary');
+    .querySelector(".player-" + activePlayer + "-panel")
+    .classList.add("bg-secondary");
 }
 
 function newGame() {
@@ -122,24 +122,24 @@ function newGame() {
   prevScore = 0;
   isGameOn = true;
 
-  var player1Panel = document.querySelector('.player-0-panel');
+  var player1Panel = document.querySelector(".player-0-panel");
 
-  player1Panel.classList.add('bg-secondary');
-  player1Panel.classList.remove('bg-success');
+  player1Panel.classList.add("bg-secondary");
+  player1Panel.classList.remove("bg-success");
 
-  document.getElementById('score-0').textContent = '0';
-  document.getElementById('current-0').textContent = '0';
-  document.getElementById('name-0').textContent = '';
+  document.getElementById("score-0").textContent = "0";
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("name-0").textContent = "";
 
-  document.querySelector('.player-1-panel').classList.remove('bg-success');
-  document.getElementById('score-1').textContent = '0';
-  document.getElementById('current-1').textContent = '0';
-  document.getElementById('name-1').textContent = '';
+  document.querySelector(".player-1-panel").classList.remove("bg-success");
+  document.getElementById("score-1").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
+  document.getElementById("name-1").textContent = "";
 
-  document.querySelector('.dice').style.display = 'none';
+  document.querySelector(".dice").style.display = "none";
 
-  document.getElementById('winning-score').value = winningScore;
+  document.getElementById("winning-score").value = winningScore;
 
-  var playBtnsEl = document.querySelector('.play-buttons');
-  playBtnsEl.classList.remove('d-none');
+  var playBtnsEl = document.querySelector(".play-buttons");
+  playBtnsEl.classList.remove("d-none");
 }
